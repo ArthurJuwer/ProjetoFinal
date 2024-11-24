@@ -12,6 +12,11 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
+
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
 }   
 button{
     width: 96%;

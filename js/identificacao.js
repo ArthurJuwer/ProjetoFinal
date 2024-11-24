@@ -40,22 +40,25 @@ fetch('retorno.json')
     console.error("Erro ao ler o arquivo JSON:", error);
   });
 
+  var resultContainer = document.getElementById('qr-reader-results');
+  var lastResult = 0;
+ 
+ 
   function onScanSuccess(decodedText, decodedResult) {
-    if (decodedText !== lastResult) {
-        lastResult = decodedText;
-        window.location = decodedText
-        // Exibe o resultado na página
-    }
-}
-
-function onScanError(errorMessage) {
-    console.error(`Erro ao ler o QR Code: ${errorMessage}`);
-}
-
-
-
-var html5QrcodeScanner = new Html5QrcodeScanner(
-    "qr-reader", { fps: 10, qrbox: 250 });
-html5QrcodeScanner.render(onScanSuccess, onScanError);
-
+      if (decodedText !== lastResult) {
+          lastResult = decodedText;
+          window.location = decodedText
+          // Exibe o resultado na página
+      }
+  }
+ 
+  function onScanError(errorMessage) {
+      console.error(`Erro ao ler o QR Code: ${errorMessage}`);
+  }
+ 
+ 
+ 
+  var html5QrcodeScanner = new Html5QrcodeScanner(
+      "qr-reader", { fps: 10, qrbox: 250 });
+  html5QrcodeScanner.render(onScanSuccess, onScanError);
   
