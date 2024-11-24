@@ -1,3 +1,13 @@
+
+
+window.addEventListener("load", () => {
+    
+    const stopButton = document.getElementById("html5-qrcpde-button-camera-stop");
+    if (stopButton) {
+        stopButton.click(); // Dispara o evento de clique no botão
+    }
+});
+ 
  // Captura o parâmetro da URL e salva no localStorage
  const urlParams = new URLSearchParams(window.location.search);
  const numero = urlParams.get('numero');
@@ -9,7 +19,7 @@
  // Função para carregar dados do JSON e exibir no painel
  function carregarDados() {
      const numeroParam = localStorage.getItem('numero'); // Obtém o parâmetro salvo
-
+    console.log(numeroParam)
      if (!numeroParam) {
          console.error('Nenhum número encontrado no localStorage.');
          return;
@@ -70,12 +80,11 @@
  }
 
  var resultContainer = document.getElementById('qr-reader-results');
- var lastResult, countResults = 0;
+ var lastResult = 0;
 
 
  function onScanSuccess(decodedText, decodedResult) {
      if (decodedText !== lastResult) {
-         ++countResults;
          lastResult = decodedText;
          window.location = decodedText
          // Exibe o resultado na página
@@ -85,6 +94,8 @@
  function onScanError(errorMessage) {
      console.error(`Erro ao ler o QR Code: ${errorMessage}`);
  }
+
+
 
  var html5QrcodeScanner = new Html5QrcodeScanner(
      "qr-reader", { fps: 10, qrbox: 250 });
