@@ -73,38 +73,12 @@
  var lastResult, countResults = 0;
 
 
- const botaoQr = document.querySelector("#html5-qrcode-button-camera-permission");
-
- // Selecionando os elementos que você quer alterar
- const scanRegion = document.querySelector("#qr-reader__scan_region");
- const scanTypeChange = document.querySelector("#html5-qrcode-anchor-scan-type-change");
- const qrImage = document.querySelector("#qr-reader img");
- 
- // Adicionando o evento de clique no botão
- botaoQr.addEventListener("click", () => {
-   // Remover o display none, se estiver presente, para exibir os elementos
-   if (scanRegion) {
-     scanRegion.style.display = scanRegion.style.display === "none" ? "block" : "block";
-   }
- 
-   if (scanTypeChange) {
-     scanTypeChange.style.display = scanTypeChange.style.display === "none" ? "block" : "block";
-   }
- 
-   if (qrImage) {
-     qrImage.style.display = qrImage.style.display === "none" ? "block" : "block";
-   }
- });
- 
-
-
  function onScanSuccess(decodedText, decodedResult) {
      if (decodedText !== lastResult) {
          ++countResults;
          lastResult = decodedText;
          // Exibe o resultado na página
          resultContainer.innerHTML = `<p>Resultado: ${decodedText}</p><p>Total de leituras: ${countResults}</p>`;
-
      }
  }
 

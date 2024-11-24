@@ -59,10 +59,6 @@
     margin: 1rem 0;
 }
 
-#qr-reader__scan_region, #html5-qrcode-anchor-scan-type-change, #qr-reader img{
-    display: none !important;
-}
-
 #html5-qrcode-button-camera-permission{
     padding: 1rem 2rem;
     font-size: 18px;
