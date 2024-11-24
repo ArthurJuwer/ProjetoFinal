@@ -1,8 +1,6 @@
-
-
 window.addEventListener("load", () => {
     
-    const stopButton = document.getElementById("html5-qrcpde-button-camera-stop");
+    const stopButton = document.getElementById("html5-qrcode-button-camera-stop");
     if (stopButton) {
         stopButton.click(); // Dispara o evento de clique no botão
     }
