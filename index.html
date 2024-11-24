@@ -25,7 +25,7 @@
                 <li><a href="./index.html">Dashboard</a></li>
                 <li><a href="./historico.html">Histórico</a></li>
                 <li><a href="./erros.html">Controle de Erros</a></li>
-                <li><a href="./indentificacao.html">Identificação</a></li>
+                <li><a href="./identificacao.html">Identificação</a></li>
             </ul>
         </nav>
     </section>
@@ -41,16 +41,14 @@
                 <p>Clique no botão abaixo para rastrear o pedido.</p>
                 <button class="main-action-button" onclick="abrirCandidatura()">Escanear QR Code</button>
             </div>
-            <div class="container-cards">
-
-            </div>
+            <div class="container-cards"></div>
         </div>
     </section>
     <div id="dialog" class="dialog-overlay hidden">
         <div class="dialog">
             <button class="close-dialog" onclick="fecharCandidatura()">×</button>
             <h3>Janela de Autorização</h3>
-            <label for="">CPF de administrador: </label>
+            <label>CPF de administrador:</label>
             <input type="text">
             <button onclick="abrirCamera()">Prosseguir</button>
         </div>
