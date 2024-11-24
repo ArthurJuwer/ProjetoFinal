@@ -1,6 +1,17 @@
 const urlParams = new URLSearchParams(window.location.search);
 const numero = localStorage.getItem('numero');
 
+let mostrar = false
+
+function fecharCandidatura() {
+  const dialog = document.querySelector('#dialog');
+  dialog.classList.add('hidden');
+  mostrar = false
+}
+function abrirCandidatura() {
+  dialog.classList.remove('hidden');
+}
+
 function carregarDados(){
 
     
@@ -41,6 +52,30 @@ function carregarDados(){
             </div>
         
         `
+        
+          console.log("entrou")
+          const dialog = document.querySelector('#dialog');
+          dialog.innerHTML = `
+           
+          <div class="dialog">
+                    <button class="close-dialog" onclick="fecharCandidatura()">×</button>
+                    <h3>Detalhes do Item Perdido</h3>
+                    <p><strong>Caixa Identificadora:</strong> ${pedido.kit_cirurgico.id}</p>
+                    <p><strong>Item:</strong> ${pedido.kit_cirurgico.itens[0].nome}</p>
+                    <p><strong>Local:</strong> ${pedido.sala}</p>
+                    <p><strong>Supervisor:</strong> ${pedido.responsavel.nome}</p>
+                    <p><strong>Data:</strong> ${pedido.hora} - ${pedido.data}</p>e
+                    <p><strong>Candidato: </strong></p>
+                    <select name="" id="">
+                        <option value="${pedido.funcionarios_disponiveis[0].nome}">${pedido.funcionarios_disponiveis[0].nome} - ${pedido.funcionarios_disponiveis[0].profissao}</option>
+                        <option value="${pedido.funcionarios_disponiveis[1].nome}">${pedido.funcionarios_disponiveis[1].nome} - ${pedido.funcionarios_disponiveis[1].profissao}</option>
+                    </select>
+                    <button onclick="fecharCandidatura()">Concluir</button>
+                </div>
+          `
+          dialog.classList.add('hidden');
+          
+        
     }
     
 

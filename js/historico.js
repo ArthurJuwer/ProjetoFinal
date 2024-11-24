@@ -1,5 +1,4 @@
 const urlParams = new URLSearchParams(window.location.search);
-const numero = localStorage.getItem('numero');
 
 fetch('retorno.json')
 
@@ -16,7 +15,21 @@ fetch('retorno.json')
 
     const pedido = dados.pedidos[0];
 
+    const tabelaDados = document.querySelector(".custom-table tbody")
 
+    tabelaDados.innerHTML = `
+    
+         <tr>
+            <td>${pedido.sala}</td>
+            <td>${pedido.hora}</td>
+            <td>${pedido.data}</td>
+            <td>${pedido.kit_cirurgico.validade}</td>
+            <td>${pedido.kit_cirurgico.id} - ${pedido.kit_cirurgico.tipo}</td>
+            <td>${pedido.kit_cirurgico.estado}</td>
+            <td>${pedido.kit_cirurgico.observacao}</td>
+            <td>${pedido.responsavel.numero_funcionario} - ${pedido.responsavel.nome}</td>
+        </tr>
+    `
 
     // card-footer - TEMPO
     // cardButton.setAttribute('href', '') // este codigo vai ser importante para o redirecionamento

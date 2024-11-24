@@ -10,26 +10,37 @@
         "data": "2024-11-07",
         "hora": "20:20:20",
         "erros": 1,
-        "foto": "",
         "kit_cirurgico": {
+          "foto": "./images/caixa.webp",
           "id": 76,
           "tipo": "cardiovascular",
           "total_itens": 5,
           "lote": "32454",
           "validade": "2025-01-15",
+          "estado": "ATIVO",
+          "observacao": "marcacão amarela em todos os itens",
           "itens": [
             {
               "id": 211,
-              "nome": "Bisturi",
-              "foto": "url"
+              "nome": "Bisturi"
             },
             {
               "id": 212,
-              "nome": "Tesoura",
-              "foto": "url"
+              "nome": "Tesoura"
             }
           ]
-        }
+        },
+        "funcionarios_disponiveis": [
+          {
+            "nome": "Arthur Juwer",
+            "profissao": "instrumentador"
+            
+          },
+          {
+            "nome": "Athos Souza",
+            "profissao": "circulante"
+          }
+        ]
       }
     ]
 }

@@ -14,7 +14,7 @@
 <section class="left-menu">
         <nav>
             <div class="logo-left-menu">
-                <h1>LOGOTIPO</h1>
+                <h1>CONTROLFLOW</h1>
                 <span class="row"></span>    
             </div>
             <div class="title-left-menu">
@@ -39,32 +39,7 @@
         <div class="container-card"></div>
     </section>
     <div id="dialog" class="dialog-overlay hidden">
-        <div class="dialog">
-            <button class="close-dialog" onclick="fecharCandidatura()">×</button>
-            <h3>Detalhes do Item Perdido</h3>
-            <p><strong>Caixa Identificadora:</strong> AB23A</p>
-            <p><strong>Item:</strong> Bisturi</p>
-            <p><strong>Local:</strong> Área Suja</p>
-            <p><strong>Supervisor:</strong> Léo</p>
-            <p><strong>Data:</strong> 22:06 - 23/11</p>
-            <p><strong>Candidato: </strong></p>
-            <select name="" id="">
-                <option value="aj">Arthur Juwer</option>
-                <option value="rk">Renan Klafke</option>
-            </select>
-            <button onclick="fecharCandidatura()">Concluir</button>
-        </div>
+        
     </div>
 </body>
-<script>
-    function abrirCandidatura() {
-        const dialog = document.querySelector('#dialog');
-        dialog.classList.remove('hidden');
-    }
-
-    function fecharCandidatura() {
-        const dialog = document.querySelector('#dialog');
-        dialog.classList.add('hidden');
-    }
-</script>
 </html>
