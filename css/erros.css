@@ -173,9 +173,6 @@ select {
 
 @media (max-width: 768px) {
     /* Ajuste no quadro */
-    .left-menu{
-        display: none;
-    }
     body{
         display: block;
     }

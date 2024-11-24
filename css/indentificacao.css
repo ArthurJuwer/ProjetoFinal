@@ -144,8 +144,9 @@
 
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
-    body {
-        padding: 10px;
+    .left-menu {
+        width: 100%; /* O menu lateral ocupa toda a largura da tela */
+        padding: 1rem;
     }
 
     .upload-container {

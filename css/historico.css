@@ -187,7 +187,8 @@ h2 {
     }
 
     .left-menu {
-        display: none; /* Oculta o menu lateral em telas pequenas */
+        width: 100%; /* O menu lateral ocupa toda a largura da tela */
+        padding: 1rem;
     }
 
     /* Ajuste na tabela */

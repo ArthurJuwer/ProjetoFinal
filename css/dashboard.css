@@ -156,7 +156,8 @@
     }
 
     .left-menu {
-        display: none; /* Esconde o menu lateral em telas menores */
+        width: 100%; /* O menu lateral ocupa toda a largura da tela */
+        padding: 1rem;
     }
 
     .header {
