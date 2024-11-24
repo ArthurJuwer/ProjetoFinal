@@ -59,18 +59,10 @@
     margin: 1rem 0;
 }
 
-.main-action-button:hover {
-    background-color: #0056b3;
-}
 #qr-reader__scan_region, #html5-qrcode-anchor-scan-type-change, #qr-reader img{
     display: none !important;
 }
-#qr-reader{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none !important;
-}
+
 #html5-qrcode-button-camera-permission{
     padding: 1rem 2rem;
     font-size: 18px;
