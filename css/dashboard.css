@@ -147,6 +147,9 @@
 
 /* Media Queries para dispositivos móveis */
 @media (max-width: 768px) {
+    body{
+        display: block;
+    }
     .content {
         margin-left: 0;
         padding: 1rem;
