@@ -20,12 +20,14 @@
     font-weight: bold;
     margin-bottom: 0.625rem; /* 10px */
 }
-.container-card{
+
+.container-card {
     display: flex;
     gap: 1rem;
     width: 100%;
     flex-wrap: wrap;
 }
+
 /* Estilo do card */
 .card {
     background-color: #ffffff;
@@ -83,8 +85,7 @@
     background-color: #005a8c;
 }
 
-/* dialog */
-
+/* Dialog */
 .dialog-overlay {
     position: fixed;
     top: 0;
@@ -148,7 +149,7 @@
     cursor: pointer;
 }
 
-select{
+select {
     margin-bottom: 1rem;
     height: 3rem;
     font-size: 0.9rem;
@@ -161,4 +162,58 @@ select{
 
 .hidden {
     display: none;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .card {
+        width: 48%; /* Dois cards por linha */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajuste no quadro */
+    .left-menu{
+        display: none;
+    }
+    body{
+        display: block;
+    }
+    .board {
+        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+    }
+
+    /* Ajuste na lista */
+    .list {
+        width: 100%; /* Lista ocupa 100% da largura da tela */
+    }
+
+    /* Ajuste nos cards */
+    .card {
+        width: 100%; /* Um card por linha */
+    }
+
+    /* Ajuste no diálogo */
+    .dialog {
+        width: 90%; /* Diálogo ocupa 90% da largura da tela */
+    }
+
+    /* Ajuste do menu lateral */
+    .left-menu {
+        width: 100%; /* O menu lateral ocupa toda a largura da tela */
+        padding: 1rem;
+    }
+
+    /* Ajustes no texto */
+    .list-title {
+        font-size: 1rem; /* Reduz o tamanho da fonte */
+    }
+
+    .card-title {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte do título */
+    }
+
+    .card-description {
+        font-size: 0.75rem; /* Ajusta o tamanho da fonte */
+    }
 }

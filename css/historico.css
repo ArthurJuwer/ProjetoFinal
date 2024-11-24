@@ -2,81 +2,90 @@ h2 {
     margin-bottom: 1.2rem;
 }
 
-.search-database{
+.search-database {
     margin: 1rem 0;
-    p{
-        margin: 0.8rem 0;
-    }
-    .input-field{
-        display: flex;
-        align-items: center;
-    }
-    input[type='search']{
-        width: 82%;
-        height: 3rem;
-        padding: 0.8rem;
-        border: 1px solid #555;
-        outline: none;
-        border-top-left-radius: 1rem;
-        border-bottom-left-radius: 1rem;
-        border-right: none;
-    }
-    
-    .input-options-field{
-        width: 14%;
-        position: relative;
-        i{
-            user-select: none;
-            position: absolute;
-            left: 5%;
-            top: 50%;
-            transform: translate(50%, -50%);
-            color: #fff;
-            pointer-events: none; 
-        }
-        select{
-            width: 100%;
-            padding-left: 4rem;
-            height: 3rem;
-            background-color: #393939;
-            color: white;
-            border: 1px solid #555;
-            appearance: none;
-            border-left: 0px;
-            border-right: 0px;
-            outline: none;
-            option{
-                opacity: 0;
-            }
-        }
-    }
-    .input-submit-field{
-        width: 4%;
-        position: relative;
-        i{
-            user-select: none;
-            position: absolute;
-            right: 50%;
-            top: 50%;
-            transform: translate(50%, -50%);
-            color: #fff;
-            pointer-events: none; 
-        }
-        input[type='submit']{
-            width: 100%;
-            padding: 0.8rem;
-            height: 3rem;
-            background-color: #4CAF50;
-            color: white;
-            border: 1px solid #555;
-            border-top-right-radius: 1rem;
-            border-bottom-right-radius: 1rem;
-            border-left: 0px
-    
-        }
-    }
 }
-.titleSearch{
+
+.search-database p {
+    margin: 0.8rem 0;
+}
+
+.search-database .input-field {
+    display: flex;
+    align-items: center;
+}
+
+.search-database input[type='search'] {
+    width: 82%;
+    height: 3rem;
+    padding: 0.8rem;
+    border: 1px solid #555;
+    outline: none;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-right: none;
+}
+
+.search-database .input-options-field {
+    width: 14%;
+    position: relative;
+}
+
+.search-database .input-options-field i {
+    user-select: none;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    color: #fff;
+    pointer-events: none;
+}
+
+.search-database .input-options-field select {
+    width: 100%;
+    padding-left: 4rem;
+    height: 3rem;
+    background-color: #393939;
+    color: white;
+    border: 1px solid #555;
+    appearance: none;
+    border-left: 0px;
+    border-right: 0px;
+    outline: none;
+}
+
+.search-database .input-options-field select option {
+    opacity: 0;
+}
+
+.search-database .input-submit-field {
+    width: 4%;
+    position: relative;
+}
+
+.search-database .input-submit-field i {
+    user-select: none;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    color: #fff;
+    pointer-events: none;
+}
+
+.search-database .input-submit-field input[type='submit'] {
+    width: 100%;
+    padding: 0.8rem;
+    height: 3rem;
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #555;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-left: 0px;
+}
+
+.titleSearch {
     padding-bottom: 0.725rem;
 }
 
@@ -88,52 +97,131 @@ h2 {
 }
 
 .custom-table th,
-.custom-table td{
+.custom-table td {
     padding: 0.5rem 0.5rem;
     text-align: left;
     border: 1px solid #ddd;
     font-size: 0.8rem;
 }
 
-.custom-table th{
+.custom-table th {
     background-color: #0079bf;
-    /* #4CAF50 */
     color: white;
     font-size: 0.8rem;
 }
 
-.custom-table tr:hover{
+.custom-table tr:hover {
     background-color: #ddd;
 }
 
-.custom-table td{
+.custom-table td {
     color: #555;
 }
-.ticket{
+
+.ticket {
     padding: 0.2rem;
     border-radius: 0.425rem;
     color: #fff;
     font-size: 0.725rem;
     background: #0079bf;
 }
-.actions{
+
+.actions {
     display: flex;
     column-gap: 0.8rem;
-
-    button{
-        font-size: 1rem;
-        border: none;
-        background: transparent;
-        cursor: pointer;
-    }
 }
-.notblocked{
+
+.actions button {
+    font-size: 1rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.notblocked {
     color: green;
 }
-.blocked{
+
+.blocked {
     color: red;
-    
 }
 
+/* Responsividade */
+@media (max-width: 1024px) {
+    /* Ajuste no campo de pesquisa */
+    .search-database .input-field {
+        flex-direction: column; /* Empilha os campos de pesquisa */
+    }
+    
+    .search-database input[type='search'] {
+        width: 100%; /* Campo de pesquisa ocupa toda a largura */
+        margin-bottom: 1rem;
+    }
 
-/*  */
+    .search-database .input-options-field,
+    .search-database .input-submit-field {
+        width: 100%;
+    }
+
+    .search-database .input-options-field select {
+        width: 100%;
+        padding-left: 3rem; /* Ajusta o padding para manter a área do ícone */
+    }
+
+    /* Ajuste da tabela */
+    .custom-table th,
+    .custom-table td {
+        font-size: 0.9rem; /* Aumenta o tamanho da fonte para melhor legibilidade */
+        padding: 0.8rem; /* Aumenta o padding para facilitar a leitura */
+    }
+
+    /* Ajustes nos tickets */
+    .ticket {
+        font-size: 0.8rem; /* Ajusta o tamanho da fonte para tickets */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        display: block;
+    }
+
+    .left-menu {
+        display: none; /* Oculta o menu lateral em telas pequenas */
+    }
+
+    /* Ajuste na tabela */
+    .custom-table th,
+    .custom-table td {
+        font-size: 0.7rem; /* Reduz o tamanho da fonte para telas menores */
+        padding: 0.6rem; /* Ajusta o padding para otimizar o espaço */
+    }
+
+    .custom-table {
+        font-size: 0.7rem; /* Reduz a fonte da tabela para telas menores */
+    }
+
+    /* Ajustes nos botões de ação */
+    .actions button {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte dos botões */
+    }
+
+    /* Ajustes na área de pesquisa */
+    .search-database .input-field {
+        flex-direction: column; /* Empilha os campos em telas menores */
+        align-items: stretch; /* Faz os campos esticarem */
+    }
+
+    .search-database input[type='search'],
+    .search-database .input-options-field select,
+    .search-database .input-submit-field input[type='submit'] {
+        width: 100%; /* Cada campo ocupa toda a largura disponível */
+        margin-bottom: 1rem;
+    }
+
+    /* Ajuste nos tickets */
+    .ticket {
+        font-size: 0.75rem; /* Ajuste no tamanho da fonte */
+        padding: 0.3rem; /* Ajusta o padding para não ocupar muito espaço */
+    }
+}

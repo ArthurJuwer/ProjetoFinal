@@ -10,25 +10,25 @@
     gap: 1rem; /* Mantido em rem */
 }
 
-.kit-area{
+.kit-area {
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     gap: 1rem;
-    input{
-        width: 100%;
-        height: 3rem;
-        border: none;
-        color: #fff;
-        border-radius: 0.5rem;
-        text-align: center;
-        font-size: 1rem;
-        background: #007bff;
-    }
-    
 }
- 
+
+.kit-area input {
+    width: 100%;
+    height: 3rem;
+    border: none;
+    color: #fff;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+    background: #007bff;
+}
+
 .upload-container {
     background-color: white;
     border-radius: 8px;
@@ -37,7 +37,7 @@
     width: 100%;
     margin: auto;
 }
- 
+
 .upload-area {
     border: 2px dashed #007bff;
     padding: 20px;
@@ -47,47 +47,46 @@
     margin-bottom: 20px;
     min-height: 150px;
 }
- 
+
 .upload-area img {
     width: 50px;
     margin-bottom: 20px;
 }
- 
+
 .upload-text {
     font-size: 16px;
     color: #007bff;
 }
- 
+
 .upload-text a {
     color: #007bff;
     text-decoration: underline;
     cursor: pointer;
 }
- 
+
 .file-input {
     display: none;
 }
- 
+
 .instructions {
     text-align: center;
     font-size: 14px;
     color: #333;
     margin-bottom: 20px;
 }
- 
+
 /* Estilos da área de escaneamento */
 .scanner-area {
     position: relative;
     border: 2px solid #007bff;
     width: 50%;
-    /* max-width: 300px; */
     height: 13rem;
     margin: auto;
     margin-bottom: 20px;
     border-radius: 8px;
     overflow: hidden;
 }
- 
+
 .scanner-box {
     position: absolute;
     top: 50%;
@@ -98,7 +97,7 @@
     animation: scan-animation 2s infinite linear;
     transform: translate(-50%, -50%);
 }
- 
+
 @keyframes scan-animation {
     0% {
         top: 0%;
@@ -110,7 +109,7 @@
         top: 100%;
     }
 }
- 
+
 /* Estilos para os resultados e mensagens */
 .scanned-result {
     display: none;
@@ -118,14 +117,14 @@
     font-size: 16px;
     color: green;
 }
- 
+
 .error-message {
     display: none;
     margin-top: 20px;
     font-size: 16px;
     color: red;
 }
- 
+
 /* Estilo do botão */
 .convert-button {
     padding: 12px;
@@ -138,29 +137,34 @@
     width: 100%;
     height: 4rem;
 }
- 
+
 .convert-button:hover {
     background-color: #0056b3;
 }
- 
+
 /* Ajustes para dispositivos móveis */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     body {
         padding: 10px;
     }
- 
+
     .upload-container {
         padding: 15px;
         width: 95%;
     }
- 
+
     .scanner-area {
         height: 180px;
     }
- 
+
     .convert-button {
         padding: 12px 20px;
         font-size: 18px;
     }
+    .content{
+        display: block;
+    }
+    #qr-reader{
+        width: 100% !important;
+    }
 }
- 

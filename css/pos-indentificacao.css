@@ -74,3 +74,17 @@ button{
     color: #888;
     text-align: right;
 }
+
+@media (max-width: 768px) {
+    .card{
+        width: 90%;
+    }
+    .card-description{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-description-section1, .card-description-section2{
+        display: flex;
+        flex-direction: column;
+    }
+}
