@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/e374ba1aa3.js" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
     <script src="./js/dashboard.js" defer></script>
+    <script src="https://unpkg.com/html5-qrcode"></script>
 </head>
 <body>
     <section class="left-menu">
@@ -25,7 +26,7 @@
                 <li><a href="./index.html">Dashboard</a></li>
                 <li><a href="./historico.html">Histórico</a></li>
                 <li><a href="./erros.html">Controle de Erros</a></li>
-                <li><a href="./identificacao.html">Identificação</a></li>
+                <li><a href="./indentificacao.html">Identificação</a></li>
             </ul>
         </nav>
     </section>
@@ -38,22 +39,28 @@
         <div class="dashboard">
             <div class="action-area">
                 <h2>Iniciar Rastreio</h2>
-                <p>Clique no botão abaixo para rastrear o pedido.</p>
-                <button class="main-action-button" onclick="abrirCandidatura()">Escanear QR Code</button>
+                <p>Acesse a câmera do seu celular e prossiga escaneando o qrcode</p>
+                <div id="qr-reader" style="width:500px"></div>
+                <div id="qr-reader-results"></div>
+                <!-- <button class="main-action-button" onclick="abrirCandidatura()">Escanear QR Code</button> -->
+
             </div>
-            <div class="container-cards"></div>
+            <div class="container-cards">
+
+            </div>
         </div>
     </section>
     <div id="dialog" class="dialog-overlay hidden">
         <div class="dialog">
             <button class="close-dialog" onclick="fecharCandidatura()">×</button>
             <h3>Janela de Autorização</h3>
-            <label>CPF de administrador:</label>
+            <label for="">CPF de administrador: </label>
             <input type="text">
             <button onclick="abrirCamera()">Prosseguir</button>
         </div>
     </div>
-    <video id="video" autoplay></video>
-    <canvas id="canvas"></canvas>
+
+
+
 </body>
 </html>
