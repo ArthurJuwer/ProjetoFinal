@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Tela Inicial</title>
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <script src="https://kit.fontawesome.com/e374ba1aa3.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+    <script src="./js/dashboard.js" defer></script>
+</head>
+<body>
+    <section class="left-menu">
+        <nav>
+            <div class="logo-left-menu">
+                <h1>LOGOTIPO</h1>
+                <span class="row"></span>
+            </div>
+            <div class="title-left-menu">
+                <i class="fa-solid fa-user"></i>
+                <h3>Opções</h3>
+            </div>
+            <ul>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./historico.html">Histórico</a></li>
+                <li><a href="./erros.html">Controle de Erros</a></li>
+                <li><a href="./indentificacao.html">Identificação</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="header">
+        <div class="header-title">
+            <h1>Dashboard</h1>
+        </div>
+    </section>
+    <section class="content">
+        <div class="dashboard">
+            <div class="action-area">
+                <h2>Iniciar Rastreio</h2>
+                <p>Clique no botão abaixo para rastrear o pedido.</p>
+                <button class="main-action-button" onclick="abrirCandidatura()">Escanear QR Code</button>
+            </div>
+            <div class="container-cards">
+
+            </div>
+        </div>
+    </section>
+    <div id="dialog" class="dialog-overlay hidden">
+        <div class="dialog">
+            <button class="close-dialog" onclick="fecharCandidatura()">×</button>
+            <h3>Janela de Autorização</h3>
+            <label for="">CPF de administrador: </label>
+            <input type="text">
+            <button onclick="abrirCamera()">Prosseguir</button>
+        </div>
+    </div>
+    <video id="video" autoplay></video>
+    <canvas id="canvas"></canvas>
+</body>
+</html>

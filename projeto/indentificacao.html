@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Read Database</title>
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/indentificacao.css">
+    <script src="https://kit.fontawesome.com/e374ba1aa3.js" crossorigin="anonymous" defer></script>
+    <script src="./js/indentificacao.js" defer></script>
+</head>
+<body>
+<section class="left-menu">
+        <nav>
+            <div class="logo-left-menu">
+                <h1>LOGOTIPO</h1>
+                <span class="row"></span>    
+            </div>
+            <div class="title-left-menu">
+            <i class="fa-solid fa-user"></i>
+                <h3>Opções</h3>
+            </div>
+            <ul> 
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./historico.html">Histórico</a></li>
+                <li><a href="./erros.html">Controle de Erros</a></li>
+                <li><a href="./indentificacao.html">Indentificação</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="header">
+        
+        <div class="header-title">
+            <h1>Indentificação de Produto</h1>
+        </div>
+    </section>
+    <section class="content">
+        <div class="container-buttons">
+            <div class="kit-area">
+                <input type="text" value="">
+            </div>
+            <div class="upload-container">
+                <!-- Instruções para o usuário -->
+                <div class="instructions">
+                    <p>Clique no botão abaixo para começar a rastrear os itens</p>
+                </div>
+         
+                <!-- Área do scanner -->
+                <div class="scanner-area">
+                    <div class="scanner-box"></div>
+                </div>
+         
+                <!-- Botão de escaneamento -->
+                <button class="convert-button">Escanear QR code</button>
+         
+                <!-- Input de arquivo invisível -->
+                <input type="file" id="fileInput" class="file-input" accept="image/*,application/pdf">
+         
+                <!-- Resultado do escaneamento -->
+                <div class="scanned-result" id="scannedResult"></div>
+         
+                <!-- Mensagem de erro -->
+                <div class="error-message" id="errorMessage">Não foi possível escanear o QR Code. Tente novamente.</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

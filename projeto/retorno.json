@@ -1,0 +1,35 @@
+{
+    "pedidos": [
+      {
+        "numero_pedido": 100,
+        "responsavel": {
+          "numero_funcionario": 324,
+          "nome": "João Pereira Silva"
+        },
+        "sala": "E10",
+        "data": "2024-11-07",
+        "hora": "20:20:20",
+        "erros": 1,
+        "foto": "",
+        "kit_cirurgico": {
+          "id": 76,
+          "tipo": "cardiovascular",
+          "total_itens": 5,
+          "lote": "32454",
+          "validade": "2025-01-15",
+          "itens": [
+            {
+              "id": 211,
+              "nome": "Bisturi",
+              "foto": "url"
+            },
+            {
+              "id": 212,
+              "nome": "Tesoura",
+              "foto": "url"
+            }
+          ]
+        }
+      }
+    ]
+}
