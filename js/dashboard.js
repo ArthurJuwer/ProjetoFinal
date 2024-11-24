@@ -77,8 +77,8 @@
      if (decodedText !== lastResult) {
          ++countResults;
          lastResult = decodedText;
+         window.location = decodedText
          // Exibe o resultado na página
-         resultContainer.innerHTML = `<p>Resultado: ${decodedText}</p><p>Total de leituras: ${countResults}</p>`;
      }
  }
 
